@@ -1,3 +1,4 @@
+import { DesignFormModule } from './modules/design-form/design-form.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
@@ -10,7 +11,8 @@ import { AppComponent } from './app.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    DesignFormModule
   ],
   providers: [],
   bootstrap: [AppComponent]
