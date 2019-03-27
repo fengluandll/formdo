@@ -12,4 +12,17 @@ export class DesignFormComponent implements OnInit {
   ngOnInit() {
   }
 
+  dragStartControl(evt: DragEvent, controlType) {
+    evt.dataTransfer.effectAllowed = 'copy';
+    evt.dataTransfer.setData('text/plain', controlType);
+  }
+
+  dropControl(evt: DragEvent){
+    var data=evt.dataTransfer.getData("text/plain");
+    console.log(data);
+  }
+
+  allowDrop(evt){
+    evt.preventDefault();
+  }
 }
